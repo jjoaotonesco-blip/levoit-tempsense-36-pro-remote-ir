@@ -1,0 +1,13 @@
+.gradle/
+build/
+local.properties
+*.iml
+
+app/build/
+keystore.properties
+*.jks
+*.keystore
+dist/
+analysis/
+signing/
+levoit_*.png
