@@ -7,7 +7,7 @@
 - Version name: `1.0`
 - Version code: `1`
 - Size: `1488511` bytes
-- SHA-256: `7C5E0236A3F9FA74D533C10A1957CD63E550794735E77D75AFB8428D7CEBDF1F`
+- SHA-256: `B87E1B4A4A678674BED73DBF8E60292CFB40A6472A1D943D6151A4DFD4CC97B4`
 
 ## Verification Commands
 
@@ -20,4 +20,6 @@ adb shell dumpsys package pt.local.levoitir | Select-String "versionName|version
 ## Notes
 
 The app installed on the test Redmi device should report `versionName=1.0` and `versionCode=1`. If the GitHub release asset is older than the repository APK, replace the release asset with the current signed APK.
+
+This build adds a saved screen flip toggle for people using an external IR adapter.
 
