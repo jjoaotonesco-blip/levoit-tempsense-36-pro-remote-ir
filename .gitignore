@@ -13,3 +13,6 @@ signing/
 levoit_*.png
 stitch_design/
 stitch_design_new/
+app/
+build.gradle
+settings.gradle
