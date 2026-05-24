@@ -1,0 +1,15 @@
+.gradle/
+build/
+local.properties
+*.iml
+
+app/build/
+keystore.properties
+*.jks
+*.keystore
+dist/
+analysis/
+signing/
+levoit_*.png
+stitch_design/
+stitch_design_new/
