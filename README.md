@@ -10,14 +10,15 @@ Useful for people searching for a Levoit TempSense 36 Pro IR remote, Xiaomi IR r
 
 ## Download APK
 
-- Latest GitHub release page: https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/releases/latest
-- Repository APK copy: `Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk`
+- Direct APK download: https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/raw/main/Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk
+- Repository APK copy: [`Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk`](Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk)
+- GitHub release page: https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/releases/latest
 - Package name: `pt.local.levoitir`
 - Current app version: `1.0`
 
 This public repository is a download and information page. The Android source code is not published here.
 
-If the release asset is older than the repository APK, use the APK file in the repository root.
+Use the direct APK download above for the current public build.
 
 ## Features
 
@@ -88,7 +89,7 @@ People may find this project through:
 
 ## Install
 
-Download the signed APK from the release page or from the `dist` folder if you built it locally:
+Download the signed APK directly:
 
 ```text
 Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk
