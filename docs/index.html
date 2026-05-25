@@ -1,195 +1,747 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-PT">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Levoit TempSense 36 Pro Remote IR APK for Android</title>
-  <meta name="description" content="Android IR remote app for Xiaomi and Redmi phones with IR blaster. Replacement remote control APK for the Levoit TempSense 36 Pro tower fan.">
-  <meta name="keywords" content="Levoit TempSense 36 Pro remote APK, Android IR remote, Xiaomi IR blaster, Redmi IR remote, Levoit fan remote, tower fan remote, NEC IR codes, ConsumerIrManager">
+  <title>Levoit TempSense 36 Pro Remote IR - APK Android</title>
+  <meta name="description" content="APK Android para controlar a torre Levoit TempSense 36 Pro por infravermelhos em telemóveis Xiaomi, Redmi e outros dispositivos com emissor IR.">
+  <meta name="keywords" content="Levoit TempSense 36 Pro remote APK, comando remoto IR, infravermelhos Android, Xiaomi IR blaster, Redmi IR remote, Levoit fan remote, ConsumerIrManager, NEC IR codes">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jjoaotonesco-blip.github.io/levoit-tempsense-36-pro-remote-ir/">
   <meta property="og:title" content="Levoit TempSense 36 Pro Remote IR APK">
-  <meta property="og:description" content="Android IR remote app for Xiaomi and Redmi phones with IR blaster. Replacement remote control for Levoit TempSense 36 Pro tower fan.">
+  <meta property="og:description" content="Comando remoto Android por infravermelhos para a torre Levoit TempSense 36 Pro. Compatível com telemóveis Xiaomi e Redmi com IR blaster.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jjoaotonesco-blip.github.io/levoit-tempsense-36-pro-remote-ir/">
   <meta property="og:image" content="https://jjoaotonesco-blip.github.io/levoit-tempsense-36-pro-remote-ir/screenshot.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: dark;
-      --bg: #101415;
-      --panel: #1d2022;
-      --text: #e0e3e5;
-      --muted: #b7c8e1;
-      --accent: #47d6ff;
-      --line: rgba(255, 255, 255, 0.12);
+      --bg: #0c0f0f;
+      --surface: #111414;
+      --card: #121414;
+      --card-hover: #1a1d1d;
+      --line: #3a494b;
+      --line-soft: rgba(58, 73, 75, 0.72);
+      --text: #e1e3e2;
+      --muted: #b9cacb;
+      --muted-2: #849495;
+      --cyan: #00f2ff;
+      --cyan-soft: #74f5ff;
+      --cyan-dim: #00dbe7;
+      --black-cyan: #00363a;
+      --danger: #ffb4ab;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: radial-gradient(circle at top, rgba(71, 214, 255, 0.16), transparent 36%), var(--bg);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(0, 242, 255, 0.08), transparent 34rem),
+        radial-gradient(circle at 86% 18%, rgba(0, 242, 255, 0.06), transparent 30rem),
+        var(--bg);
       color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Lexend, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
 
-    main {
-      width: min(980px, calc(100% - 32px));
+    a {
+      color: inherit;
+    }
+
+    .material-symbols-outlined {
+      font-family: "Material Symbols Outlined";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      direction: ltr;
+      font-feature-settings: "liga";
+      -webkit-font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+      vertical-align: middle;
+    }
+
+    .page-shell {
+      width: min(1280px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 56px 0;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
-      gap: 36px;
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line-soft);
+      background: rgba(12, 15, 15, 0.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.2rem, 6vw, 4.4rem);
-      line-height: 1.02;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
       letter-spacing: 0;
     }
 
-    h2 {
-      margin-top: 40px;
-      font-size: 1.35rem;
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(0, 242, 255, 0.45);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.14);
     }
 
-    p {
-      color: var(--muted);
-      margin: 0 0 16px;
-    }
-
-    .lead {
-      font-size: 1.15rem;
-      max-width: 620px;
-    }
-
-    .actions {
+    .nav {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 28px 0;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
-    a {
-      color: var(--accent);
+    .nav a {
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--cyan);
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(71, 214, 255, 0.12);
+      color: var(--cyan-soft);
+      background: rgba(0, 242, 255, 0.04);
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .button:hover {
+      border-color: rgba(0, 242, 255, 0.5);
+      background: rgba(0, 242, 255, 0.08);
+      box-shadow: 0 0 24px rgba(0, 242, 255, 0.16);
+    }
+
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    .button.primary {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: var(--black-cyan);
+      box-shadow: 0 0 24px rgba(0, 242, 255, 0.2);
+    }
+
+    .button.primary:hover {
+      box-shadow: 0 0 32px rgba(0, 242, 255, 0.38);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+      gap: 64px;
+      align-items: center;
+      padding: 82px 0 96px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border: 1px solid rgba(0, 242, 255, 0.2);
+      border-radius: 999px;
+      background: rgba(0, 242, 255, 0.08);
+      color: var(--cyan-soft);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      max-width: 760px;
+      color: #fff;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .accent {
+      color: var(--cyan);
+    }
+
+    .lead {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .mini-stat {
+      border: 1px solid var(--line-soft);
+      border-radius: 12px;
+      background: rgba(18, 20, 20, 0.88);
+      padding: 14px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 20px;
+    }
+
+    .mini-stat span {
+      color: var(--muted-2);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .phone-stage {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 640px;
+    }
+
+    .phone-stage::before {
+      content: "";
+      position: absolute;
+      width: min(86vw, 520px);
+      height: min(86vw, 520px);
+      border-radius: 50%;
+      background: rgba(0, 242, 255, 0.08);
+      filter: blur(80px);
+    }
+
+    .phone-frame {
+      position: relative;
+      width: min(330px, 74vw);
+      aspect-ratio: 9 / 19.5;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 42px;
+      background: linear-gradient(145deg, #323535, #111414);
+      box-shadow: 0 38px 100px rgba(0, 0, 0, 0.52);
+    }
+
+    .phone-frame::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 50%;
+      width: 86px;
+      height: 22px;
+      border-radius: 999px;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #000;
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .section.alt {
+      width: 100%;
+      background: rgba(25, 28, 28, 0.72);
+      border-top: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 38px;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .copy {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      min-height: 190px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at top left, rgba(0, 242, 255, 0.05), transparent 58%),
+        var(--card);
+      padding: 24px;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 242, 255, 0.75);
+      background:
+        radial-gradient(circle at top left, rgba(0, 242, 255, 0.08), transparent 58%),
+        var(--card-hover);
+      box-shadow: 0 0 26px rgba(0, 242, 255, 0.11);
+    }
+
+    .card .material-symbols-outlined {
+      margin-bottom: 18px;
+      color: var(--cyan);
+      font-size: 40px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: #fff;
+      font-size: 21px;
+      line-height: 1.25;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+      gap: 64px;
+      align-items: center;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 16px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       color: var(--text);
+    }
+
+    .check-list .material-symbols-outlined {
+      color: var(--cyan);
+    }
+
+    .terminal {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at top right, rgba(0, 242, 255, 0.08), transparent 42%),
+        #111414;
+      padding: 28px;
+    }
+
+    .terminal-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 22px;
+      color: var(--muted-2);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .terminal p {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 14px;
+    }
+
+    .terminal .ok {
+      color: #72f6a8;
+    }
+
+    .terminal .cyan {
+      color: var(--cyan);
+    }
+
+    .download-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      border: 1px solid rgba(0, 242, 255, 0.28);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(0, 242, 255, 0.12), transparent 42%),
+        #121414;
+      padding: 30px;
+      box-shadow: 0 0 36px rgba(0, 242, 255, 0.1);
+    }
+
+    .hash {
+      display: block;
+      max-width: 100%;
+      margin-top: 14px;
+      padding: 12px;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.26);
+      color: var(--cyan-soft);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .legal {
+      border: 1px solid rgba(255, 180, 171, 0.3);
+      border-radius: 16px;
+      background: rgba(255, 180, 171, 0.06);
+      padding: 22px;
+    }
+
+    .legal strong {
+      color: #fff;
+    }
+
+    footer {
+      padding: 34px 0 42px;
+      border-top: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .footer-links a {
+      color: var(--cyan-soft);
       text-decoration: none;
       font-weight: 700;
     }
 
-    .button.primary {
-      background: var(--accent);
-      color: #061018;
-      border-color: var(--accent);
-    }
+    @media (max-width: 980px) {
+      .nav {
+        display: none;
+      }
 
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(29, 32, 34, 0.78);
-      padding: 18px;
-    }
-
-    .screenshot {
-      width: 100%;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
-    }
-
-    ul {
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    code {
-      color: var(--text);
-      overflow-wrap: anywhere;
-    }
-
-    footer {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 760px) {
-      main {
-        padding-top: 32px;
+      .hero,
+      .split,
+      .download-card {
+        grid-template-columns: 1fr;
       }
 
       .hero {
+        gap: 36px;
+        padding-top: 46px;
+      }
+
+      .phone-stage {
+        min-height: auto;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner {
+        min-height: 64px;
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .hero-actions,
+      .download-card .button {
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .mini-grid,
+      .cards {
         grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .download-card {
+        padding: 22px;
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <section class="hero">
+  <header class="topbar">
+    <div class="page-shell topbar-inner">
+      <a class="brand" href="#top" aria-label="Levoit TempSense 36 Pro Remote IR">
+        <span class="brand-mark material-symbols-outlined">settings_remote</span>
+        <span>Levoit TempSense IR</span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir">GitHub</a>
+        <a href="#download">Download</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#licenca">Licença</a>
+      </nav>
+      <a class="button primary" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/raw/main/Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk">
+        <span class="material-symbols-outlined">download</span>
+        APK
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-shell hero">
       <div>
-        <h1>Levoit TempSense 36 Pro Remote IR APK for Android</h1>
-        <p class="lead">Android IR remote app for Xiaomi and Redmi phones with IR blaster. Replacement remote control for Levoit TempSense 36 Pro tower fan.</p>
-        <p>This unofficial app sends NEC infrared commands through Android's native ConsumerIrManager API. It is made for Android phones with built-in IR hardware and may also work with compatible external IR transmitters.</p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/raw/main/Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk">Download APK</a>
-          <a class="button" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir">View Source</a>
+        <div class="eyebrow">
+          <span class="material-symbols-outlined">sensors</span>
+          Android IR Remote
         </div>
-        <div class="card">
-          <strong>Current APK SHA-256</strong>
-          <p><code>B87E1B4A4A678674BED73DBF8E60292CFB40A6472A1D943D6151A4DFD4CC97B4</code></p>
+        <h1>Levoit TempSense <span class="accent">36 Pro</span> Remote IR</h1>
+        <p class="lead">APK Android para controlar a torre Levoit TempSense 36 Pro por infravermelhos em telemóveis Xiaomi, Redmi e outros dispositivos com emissor IR integrado.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/raw/main/Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk">
+            <span class="material-symbols-outlined">download</span>
+            Transferir APK
+          </a>
+          <a class="button" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir">
+            <span class="material-symbols-outlined">code</span>
+            Ver código no GitHub
+          </a>
+        </div>
+        <div class="mini-grid">
+          <div class="mini-stat">
+            <strong>NEC</strong>
+            <span>Protocolo IR</span>
+          </div>
+          <div class="mini-stat">
+            <strong>38 kHz</strong>
+            <span>Frequência</span>
+          </div>
+          <div class="mini-stat">
+            <strong>MSB</strong>
+            <span>Ordem testada</span>
+          </div>
         </div>
       </div>
-      <img class="screenshot" src="screenshot.png" alt="Levoit TempSense 36 Pro Remote IR Android app screenshot">
+      <div class="phone-stage" aria-label="Screenshot da aplicação">
+        <div class="phone-frame">
+          <img src="screenshot.png" alt="Screenshot da app Levoit TempSense 36 Pro Remote IR em Android">
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Features</h2>
-      <ul>
-        <li>Power, swing, timer, sleep mode, sound, mode, and fan speed controls.</li>
-        <li>NEC MSB infrared codes tested on a Redmi phone with integrated IR.</li>
-        <li>Local sync controls to match the app display with the real tower state.</li>
-        <li>Saved screen flip mode for external IR adapter setups.</li>
-        <li>Offline control without Wi-Fi, Bluetooth, account login, or pairing.</li>
-      </ul>
+    <section class="page-shell section">
+      <div class="section-head">
+        <h2>Controlo total na ponta dos dedos</h2>
+        <p>Mapeamento dos comandos infravermelhos essenciais da torre Levoit TempSense 36 Pro, numa interface feita para toque rápido.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="material-symbols-outlined">power_settings_new</span>
+          <h3>Ligar/Desligar</h3>
+          <p>Alterna a energia da torre através do código IR correspondente.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">sync</span>
+          <h3>Oscilação</h3>
+          <p>Ativa ou para o movimento horizontal da torre.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">timer</span>
+          <h3>Temporizador</h3>
+          <p>Envia o comando de timer e guarda o estado visual local.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">air</span>
+          <h3>Velocidade</h3>
+          <p>Controla a potência com comandos de subir e descer velocidade.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">bedtime</span>
+          <h3>Modo Noite</h3>
+          <p>Botão dedicado para o modo noturno da TempSense.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">volume_off</span>
+          <h3>Som/Mudo</h3>
+          <p>Permite alternar os bipes de confirmação da torre.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">rebase_edit</span>
+          <h3>Sincronizadores</h3>
+          <p>Ajustam o estado visual da app sem enviar IR, para alinhar com a torre real.</p>
+        </article>
+        <article class="card">
+          <span class="material-symbols-outlined">screen_rotation</span>
+          <h3>Ecrã invertido</h3>
+          <p>Modo guardado para quem usa adaptadores IR externos em posições diferentes.</p>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Device Support</h2>
-      <p>Requires an Android phone with built-in IR hardware, such as compatible Xiaomi or Redmi models, or an external IR transmitter that exposes itself through Android's consumer IR API.</p>
+    <section class="section alt" id="hardware">
+      <div class="page-shell split">
+        <div>
+          <div class="eyebrow">
+            <span class="material-symbols-outlined">info</span>
+            Requisitos de hardware
+          </div>
+          <h2>Feito para telemóveis Android com emissor IR</h2>
+          <p class="copy">Esta aplicação utiliza a API nativa do Android <code>ConsumerIrManager</code>. Para funcionar, o telemóvel precisa de emissor físico de infravermelhos ou de um transmissor externo compatível com essa API.</p>
+          <ul class="check-list">
+            <li><span class="material-symbols-outlined">check_circle</span> Xiaomi, Redmi e POCO compatíveis com IR blaster</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Outros Android com emissor IR integrado</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Adaptadores IR externos compatíveis com Android</li>
+            <li><span class="material-symbols-outlined">cancel</span> Não funciona em dispositivos sem hardware IR compatível</li>
+          </ul>
+        </div>
+        <div class="terminal" aria-label="Diagnóstico técnico">
+          <div class="terminal-head">
+            <span>SYSTEM_DIAGNOSTICS_LOG</span>
+            <span>[v1.0]</span>
+          </div>
+          <p><span class="cyan">&gt;&gt;&gt;</span> Checking ConsumerIrManager...</p>
+          <p class="ok">SUCCESS: IR API ready.</p>
+          <p><span class="cyan">&gt;&gt;&gt;</span> Protocol: NEC MSB</p>
+          <p><span class="cyan">&gt;&gt;&gt;</span> Carrier frequency: 38 kHz</p>
+          <p class="cyan">Status: Ready for transmission.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>License</h2>
-      <p>This project is source-available for personal and non-commercial use under the PolyForm Noncommercial License 1.0.0. Commercial use, APK resale, code resale, or paid redistribution requires written permission.</p>
-      <p><a href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/blob/main/LICENSE">Read the license</a> and <a href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/blob/main/TERMS.md">Portuguese terms</a>.</p>
+    <section class="page-shell section" id="download">
+      <div class="download-card">
+        <div>
+          <div class="eyebrow">
+            <span class="material-symbols-outlined">verified</span>
+            Download verificado
+          </div>
+          <h2>Transferir APK Android</h2>
+          <p class="copy">Ficheiro atual: <strong>Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk</strong></p>
+          <span class="hash">SHA-256: B87E1B4A4A678674BED73DBF8E60292CFB40A6472A1D943D6151A4DFD4CC97B4</span>
+        </div>
+        <a class="button primary" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/raw/main/Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk">
+          <span class="material-symbols-outlined">download_for_offline</span>
+          Transferir agora
+        </a>
+      </div>
     </section>
 
-    <footer>
-      <p>Unofficial project. Not affiliated with Levoit.</p>
-      <p>Search terms: Levoit TempSense 36 Pro remote APK, Android IR remote, Xiaomi IR blaster, Redmi IR remote, Levoit tower fan remote, NEC IR codes.</p>
-    </footer>
+    <section class="page-shell section" id="licenca">
+      <div class="legal">
+        <h2>Uso gratuito não comercial</h2>
+        <p class="copy"><strong>Este projeto é source-available para uso pessoal e não comercial.</strong> É proibida a venda do APK, do código, de versões modificadas ou de redistribuições pagas sem autorização escrita.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/blob/main/LICENSE">
+            <span class="material-symbols-outlined">gavel</span>
+            Ver licença
+          </a>
+          <a class="button" href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/blob/main/TERMS.md">
+            <span class="material-symbols-outlined">article</span>
+            Termos em português
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="page-shell">
+      <p>Projeto não oficial. Não afiliado à Levoit.</p>
+      <p>Termos de pesquisa: Levoit TempSense 36 Pro remote APK, comando remoto IR Android, Xiaomi IR blaster, Redmi IR remote, Levoit tower fan remote, ConsumerIrManager, NEC IR codes.</p>
+      <div class="footer-links">
+        <a href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir">GitHub</a>
+        <a href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/raw/main/Levoit-TempSense-36-Pro-Remote-IR-v1.0.apk">Download APK</a>
+        <a href="https://github.com/jjoaotonesco-blip/levoit-tempsense-36-pro-remote-ir/blob/main/LICENSE">Licença</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
