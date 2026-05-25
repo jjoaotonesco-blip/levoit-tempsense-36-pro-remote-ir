@@ -18,7 +18,7 @@ Useful for people searching for a Levoit TempSense 36 Pro IR remote, Xiaomi IR r
 - Package name: `pt.local.levoitir`
 - Current app version: `1.0`
 
-This public repository is a download and information page. The Android source code is not published here.
+This public repository provides the APK, source code, screenshots, release notes, and app listing text under non-commercial terms.
 
 Use the direct APK download above for the current public build.
 
@@ -101,7 +101,7 @@ Then install it on an Android device that supports IR.
 
 ## Source Code
 
-Public files in this repository are provided for review, personal use, and non-commercial use only. Source code, if published here, is also covered by the same non-commercial terms.
+The Android source code is available in this repository for review, personal use, study, and non-commercial modification. Commercial use is not allowed without prior written permission.
 
 ## License
 

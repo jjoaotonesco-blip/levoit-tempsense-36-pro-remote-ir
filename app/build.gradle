@@ -1,0 +1,22 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "pt.local.levoitir"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "pt.local.levoitir"
+        minSdk 19
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "Levoit-TempSense-36-Pro-Remote-IR-v${variant.versionName}-${variant.buildType.name}.apk"
+        }
+    }
+}
