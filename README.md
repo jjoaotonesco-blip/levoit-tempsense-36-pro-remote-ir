@@ -1,5 +1,7 @@
 # Levoit TempSense 36 Pro Remote IR APK
 
+> **Uso Não Comercial:** este projeto é disponibilizado sob a [PolyForm Noncommercial License 1.0.0](LICENSE). O uso é gratuito apenas para fins pessoais e não lucrativos. É proibida a venda do APK, do código ou de versões derivadas sem autorização escrita.
+
 Android infrared remote control app and APK for the Levoit TempSense 36 Pro tower fan.
 
 This app is made for Android phones with a built-in infrared emitter, such as some Xiaomi and Redmi devices. It may also work with external IR transmitters if the accessory is compatible with Android's `ConsumerIrManager` infrared API.
@@ -99,7 +101,13 @@ Then install it on an Android device that supports IR.
 
 ## Source Code
 
-The source code is private. This repository is used for the public APK download, screenshots, release notes, and app listing text.
+Public files in this repository are provided for review, personal use, and non-commercial use only. Source code, if published here, is also covered by the same non-commercial terms.
+
+## License
+
+This project is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+
+Commercial use, selling the APK, selling the code, or using this project in a paid product or business context requires prior written permission from the author. See [TERMS.md](TERMS.md) for a Portuguese summary.
 
 ## Disclaimer
 
