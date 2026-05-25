@@ -73,29 +73,6 @@ Termos comuns: comando remoto IR compativel com Levoit TempSense 36 Pro, app IR 
 - Working bit order: MSB
 - Carrier frequency: 38 kHz
 
-## Suggested GitHub Topics
-
-Add these topics to the GitHub repository About section:
-
-```text
-levoit
-tempsense
-tempsense-36-pro
-android
-apk
-ir-remote
-infrared
-ir-blaster
-xiaomi
-redmi
-consumerirmanager
-nec-protocol
-nec-msb
-tower-fan
-fan-remote
-replacement-remote
-```
-
 ## Keywords
 
 compatible with Levoit TempSense 36 Pro, Levoit TempSense 36 Pro remote APK, remote IR compatible with Levoit TempSense 36 Pro, unofficial Levoit TempSense remote, Android IR remote, Android infrared remote, Android IR blaster, Xiaomi IR blaster, Xiaomi IR remote, Redmi IR remote, Redmi Note IR blaster, NEC protocol, NEC MSB, ConsumerIrManager, tower fan remote app, IR remote APK, replacement remote app, comando remoto IR, telecomando infravermelho Android.
