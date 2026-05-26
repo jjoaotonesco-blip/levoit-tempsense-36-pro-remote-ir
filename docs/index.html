@@ -436,6 +436,50 @@
       text-align: center;
     }
 
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+      text-align: left;
+    }
+
+    .contact-form label {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 2px solid rgba(159, 202, 255, 0.26);
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.22);
+      color: var(--text);
+      font: inherit;
+      padding: 14px 16px;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(20, 152, 255, 0.12);
+    }
+
+    .contact-note {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
     .legal-panel strong {
       color: #fff;
     }
@@ -652,6 +696,29 @@
       </div>
     </section>
 
+    <section class="shell section" id="contacto">
+      <div class="legal-panel">
+        <span class="small-title">Pedir suporte para outra ventoinha</span>
+        <h2>Queres outro modelo?</h2>
+        <p><strong>Envia o modelo da ventoinha e, se tiveres, os códigos IR.</strong> O botão abre o teu email já preenchido para pedir compatibilidade.</p>
+        <form class="contact-form" id="contact-form">
+          <div>
+            <label for="fan-model">Modelo da ventoinha</label>
+            <input id="fan-model" name="fan-model" type="text" placeholder="Ex: Levoit, Dreo, Xiaomi, Rowenta..." autocomplete="off">
+          </div>
+          <div>
+            <label for="fan-message">Mensagem</label>
+            <textarea id="fan-message" name="fan-message" placeholder="Escreve o que queres controlar, telemóvel usado, e se tens códigos IR NEC."></textarea>
+          </div>
+          <button class="button" type="submit">
+            <span class="material-symbols-outlined">mail</span>
+            Enviar pedido por email
+          </button>
+          <p class="contact-note">Email de contacto: jjoaotonesco@gmail.com</p>
+        </form>
+      </div>
+    </section>
+
     <section class="shell section" id="licenca">
       <div class="legal-panel">
         <h2>Uso pessoal e não comercial</h2>
@@ -676,5 +743,27 @@
       <p class="no-sale">Proibida a venda deste APK ou código.</p>
     </div>
   </footer>
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    contactForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const model = document.getElementById("fan-model").value.trim();
+      const message = document.getElementById("fan-message").value.trim();
+      const subject = encodeURIComponent("Pedido para adicionar outra ventoinha IR");
+      const body = encodeURIComponent([
+        "Olá João,",
+        "",
+        "Gostava que adicionasses suporte para outra ventoinha.",
+        "",
+        `Modelo: ${model || "(não indicado)"}`,
+        "",
+        "Mensagem:",
+        message || "(sem mensagem)",
+        "",
+        "Enviado pela página TempSense IR Remote."
+      ].join("\n"));
+      window.location.href = `mailto:jjoaotonesco@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
